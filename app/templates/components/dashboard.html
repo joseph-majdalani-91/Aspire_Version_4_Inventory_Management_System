@@ -1,0 +1,28 @@
+<section id="dashboard-view" class="view hidden">
+  <div id="dashboard-loading" class="state">Loading dashboard...</div>
+  <div id="dashboard-error" class="state error hidden"></div>
+
+  <div class="kpi-grid" id="dashboard-kpis">
+    <article class="kpi-card"><h3>Total Items</h3><p id="kpi-total-items">0</p></article>
+    <article class="kpi-card"><h3>Active Items</h3><p id="kpi-active-items">0</p></article>
+    <article class="kpi-card"><h3>Total Quantity</h3><p id="kpi-total-qty">0</p></article>
+    <article class="kpi-card alert"><h3>Low Stock Alerts</h3><p id="kpi-low-stock">0</p></article>
+  </div>
+
+  <div class="split-grid">
+    <article class="card">
+      <h3>Items By Category</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Category</th><th>Count</th></tr></thead>
+          <tbody id="category-table-body"></tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Recent Activity</h3>
+      <ul id="activity-list" class="activity-list"></ul>
+    </article>
+  </div>
+</section>

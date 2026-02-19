@@ -1,0 +1,46 @@
+<div class="bg-pattern"></div>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <p class="eyebrow">Independent Build</p>
+      <h1>Inventory OS</h1>
+    </div>
+
+    <nav class="nav" id="app-nav">
+      <button data-target="dashboard-view" class="nav-item active">Dashboard</button>
+      <button data-target="inventory-view" class="nav-item">Inventory</button>
+      <button data-target="search-view" class="nav-item">Search</button>
+      <button data-target="ai-view" class="nav-item">AI Insights</button>
+    </nav>
+
+    <section class="demo-creds">
+      <h2>Demo Login</h2>
+      <p>`admin` / `admin123`</p>
+      <p>`manager` / `manager123`</p>
+      <p>`viewer` / `viewer123`</p>
+    </section>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2 id="view-title">Dashboard</h2>
+        <p id="view-subtitle" class="muted">Track stock health and recent operational movement.</p>
+      </div>
+      <div class="topbar-actions">
+        <span id="role-badge" class="role-badge">Guest</span>
+        <button id="logout-btn" class="secondary" type="button">Logout</button>
+      </div>
+    </header>
+
+    {% include "components/auth.html" %}
+    {% include "components/dashboard.html" %}
+    {% include "components/inventory-list.html" %}
+    {% include "components/search.html" %}
+    {% include "components/ai-features.html" %}
+
+    <p id="global-feedback" class="feedback" role="status" aria-live="polite"></p>
+  </main>
+</div>
+
+{% include "components/item-form-modal.html" %}

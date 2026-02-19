@@ -1,0 +1,39 @@
+<section id="ai-view" class="view hidden">
+  <div class="split-grid">
+    <article class="card">
+      <div class="section-heading">
+        <h3>Reorder Copilot</h3>
+        <button id="refresh-reorder-btn" class="secondary" type="button">Refresh</button>
+      </div>
+      <p id="reorder-source" class="muted"></p>
+      <div id="reorder-loading" class="state hidden">Generating reorder suggestions...</div>
+      <div id="reorder-error" class="state error hidden"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>SKU</th>
+              <th>Name</th>
+              <th>Qty</th>
+              <th>Threshold</th>
+              <th>Order Qty</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody id="reorder-body"></tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="section-heading">
+        <h3>Anomaly Alerts</h3>
+        <button id="refresh-anomaly-btn" class="secondary" type="button">Refresh</button>
+      </div>
+      <p id="anomaly-source" class="muted"></p>
+      <div id="anomaly-loading" class="state hidden">Analyzing unusual movements...</div>
+      <div id="anomaly-error" class="state error hidden"></div>
+      <ul id="anomaly-list" class="activity-list"></ul>
+    </article>
+  </div>
+</section>

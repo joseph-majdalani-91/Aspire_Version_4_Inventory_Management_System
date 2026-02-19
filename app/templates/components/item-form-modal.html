@@ -1,0 +1,34 @@
+<dialog id="item-modal" class="item-modal">
+  <form id="item-form" method="dialog" class="card modal-content">
+    <div class="section-heading">
+      <h3 id="item-form-title">Create Item</h3>
+      <button id="close-item-modal" class="secondary" type="button">Close</button>
+    </div>
+
+    <input id="item-id" type="hidden" />
+
+    <div class="form-grid">
+      <label>SKU <input id="item-sku" required /></label>
+      <label>Name <input id="item-name" required /></label>
+      <label>Category <input id="item-category" required /></label>
+      <label>Quantity <input id="item-quantity" type="number" min="0" required /></label>
+      <label>Reorder Threshold <input id="item-threshold" type="number" min="0" required /></label>
+      <label>Unit Cost <input id="item-unit-cost" type="number" min="0" step="0.01" required /></label>
+      <label>Status
+        <select id="item-status">
+          <option value="">Auto</option>
+          <option value="in_stock">In Stock</option>
+          <option value="low_stock">Low Stock</option>
+          <option value="ordered">Ordered</option>
+          <option value="discontinued">Discontinued</option>
+        </select>
+      </label>
+      <label class="full">Details <textarea id="item-details" rows="3"></textarea></label>
+    </div>
+
+    <p id="item-form-error" class="error-msg hidden"></p>
+    <div class="toolbar">
+      <button id="item-form-save" type="submit">Save Item</button>
+    </div>
+  </form>
+</dialog>

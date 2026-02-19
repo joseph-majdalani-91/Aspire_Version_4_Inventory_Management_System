@@ -1,0 +1,48 @@
+<section id="search-view" class="view hidden">
+  <div class="card">
+    <h3>AI Natural Language Search</h3>
+    <form id="nl-search-form" class="toolbar">
+      <input id="nl-query" aria-label="Natural language search query" required />
+      <button id="nl-search-submit-btn" type="submit">Run AI Search</button>
+    </form>
+    <p id="nl-search-meta" class="muted"></p>
+
+    <h3>Standard Search</h3>
+    <form id="standard-search-form" class="toolbar">
+      <input id="std-query" aria-label="Standard free text query" />
+      <input id="std-category" aria-label="Category filter" />
+      <select id="std-status">
+        <option value="">Any Status</option>
+        <option value="in_stock">In Stock</option>
+        <option value="low_stock">Low Stock</option>
+        <option value="ordered">Ordered</option>
+        <option value="discontinued">Discontinued</option>
+      </select>
+      <input id="std-min-qty" type="number" min="0" aria-label="Minimum quantity filter" />
+      <input id="std-max-qty" type="number" min="0" aria-label="Maximum quantity filter" />
+      <button id="std-search-submit-btn" type="submit" class="secondary">Run Filter Search</button>
+    </form>
+
+    <div id="search-loading" class="state hidden">Searching...</div>
+    <div id="search-error" class="state error hidden"></div>
+    <div id="search-empty" class="state hidden">
+      <p>No items found. Try adjusting filters.</p>
+      <button id="reset-search-btn" class="secondary" type="button">Reset Filters</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Qty</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="search-results-body"></tbody>
+      </table>
+    </div>
+  </div>
+</section>

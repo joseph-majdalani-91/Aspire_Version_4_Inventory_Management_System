@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  inventory-app:
+    build: .
+    container_name: inventory-app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./ims_independent.db
+      - AUTH_PASSWORD_PEPPER=local-dev-pepper-change-in-production
+    volumes:
+      - .:/app
